@@ -1,0 +1,17 @@
+{
+  "name": "real_estate",
+  "version": "1.0.0",
+  "description": "Starte scripts for real_estate",
+  "author": "@dasdachs",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "5.1.0",
+    "husky": "^4.2.3"
+  },
+  "scripts": {
+    "start": "concurrently \"cd client && yarn start\" \"cd backend && poetry run python server.py\"",
+    "install": "concurrently \"yarn\" \"cd client && yarn\" \"cd backend && poetry install\"",
+    "test": "concurrently \"cd client && yarn test\" \"cd backend && poetry run pytest\"",
+    "lint": "concurrently \"cd client && yarn lint\" \"cd backend && poetry run black\""
+  }
+}
